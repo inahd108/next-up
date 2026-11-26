@@ -14,16 +14,13 @@ win:
   target:
     - target: nsis
       arch: [x64]
-    - target: portable
-      arch: [x64]
 nsis:
-  oneClick: false
+  # One click, just for the current user: no admin prompt, no wizard, opens when done.
+  oneClick: true
   perMachine: false
-  allowToChangeInstallationDirectory: true
+  runAfterFinish: true
   createDesktopShortcut: true
   createStartMenuShortcut: true
   shortcutName: Next up
   uninstallDisplayName: Next up
   artifactName: Next-up-Setup-${version}.${ext}
-portable:
-  artifactName: Next-up-Portable-${version}.${ext}

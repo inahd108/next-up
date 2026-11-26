@@ -4,7 +4,7 @@ A desktop app that looks at the Steam accounts on your PC, asks six quick questi
 
 ## Using it
 
-1. Install with `dist/Next-up-Setup-1.0.0.exe`, or run `dist/Next-up-Portable-1.0.0.exe` without installing.
+1. Run `dist/Next-up-Setup-1.0.0.exe`. It installs in one click for your user only (no admin prompt), adds Start menu and desktop shortcuts, and opens the app. Uninstall it from Windows' Installed apps. The installer isn't code-signed, so the first time Windows may show "Windows protected your PC": choose More info, then Run anyway.
 2. On first launch it finds Steam, lists the accounts that have signed in on this PC, and counts your games.
 3. Optional: paste a free [Steam Web API key](https://steamcommunity.com/dev/apikey) to add games you own but have never played on this PC. Without a key it uses the games Steam has stored locally.
 4. Choose **Find a game**, answer the questions (number keys work), and you'll get one pick with its reasons, plus three backups.
@@ -42,7 +42,7 @@ npm install
 npm run dev        # run with hot reload
 npm test           # parser and recommendation tests
 npm run typecheck
-npm run dist       # build the installer and portable exe into dist/
+npm run dist       # build the installer into dist/
 ```
 
 `npm run icon` regenerates `build/icon.png`. Setting `NEXTUP_USER_DATA` to a folder makes the app use that folder for its data, which is useful for testing without touching your real settings.
